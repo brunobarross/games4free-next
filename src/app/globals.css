@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-rgb: 39,70,144;
+  --background-main: #1F1F1F;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,15 +15,84 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --background-main: #1F1F1F;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: var(--background-main);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  margin-top: 8rem;
+  display: flex;
+  width: 100%;
+  max-width: 1448px;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.badge{
+  display: inline-flex;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: .25rem;
+  padding: .5rem .75rem;
+  font-size: .75rem;
+  font-weight: 500;
+  color: white ;
+  background-color: #002C3F;
+
+}
+.description{
+  margin-top: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    --tw-text-opacity: 1;
+    color: rgb(23 23 23 / var(--tw-text-opacity));
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .25rem;
+  padding: .875rem .75rem;
+  font-size: .75rem;
+  font-weight: 500;
+  text-align: center;
+  transition: .3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.btn.primary{
+  color: #fff;
+  background-color: rgba(var(--primary-rgb), 1);
+}
+
+.btn.primary:hover{
+  border-color: rgba(var(--primary-rgb), 1);
+  color: rgba(var(--primary-rgb), 1);
+  background-color: #fff ;
+
 }
