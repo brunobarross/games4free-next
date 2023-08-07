@@ -57,7 +57,7 @@ const Sidebar = () => {
           <a
             href="https://github.com/brunobarross"
             target="_blank"
-            className="flex  hover:-translate-y-1 mr-2"
+            className="flex transition-all  hover:-translate-y-1 mr-2"
           >
             <svg
               className="w-8 h-8"
@@ -76,7 +76,7 @@ const Sidebar = () => {
           <a
             href="https://www.linkedin.com/in/altamirobruno/"
             target="_blank"
-            className="flex  hover:-translate-y-1"
+            className="flex transition-all hover:-translate-y-1"
           >
             <svg
               className="w-8 h-8"
