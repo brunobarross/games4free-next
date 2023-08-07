@@ -1,0 +1,12 @@
+#https://stackoverflow.com/questions/58065603/netlify-renders-404-on-page-refresh-using-react-and-react-router 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+
+  [[redirects]]
+  from = "https://games4free-dash.netlify.app"
+  to = "https://games4free.app"
+  status = 200
+  force = true
