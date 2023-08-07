@@ -4,10 +4,9 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export function ItemSideBar(props) {
-    console.log(props)
   const pathname = usePathname();
   const isActive = pathname === props.link;
-  console.log(pathname, props.link)
+
 
   return (
     <Link href={props.link}

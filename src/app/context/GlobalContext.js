@@ -1,22 +1,12 @@
-"use client";
-import { Sidebar } from 'phosphor-react';
-import React from 'react';
-import Navbar from '../components/Navbar';
-
-export const GlobalContext = React.createContext();
-export const GlobalStorage = ({ children }) => {
-  const [sidebarOpen, setSideBarOpen] = React.useState(false);
+'use client'
+ 
+import { createContext, useEffect, useState } from 'react'
+ 
+export const GlobalContext = createContext({})
+ 
+export default function GlobalProvider({ children }) {
+  const [sidebarOpen, setSideBarOpen] = useState(false)
+  const [isActive, setIsActive] = useState(false)
   
-  return (
-    <GlobalContext.Provider
-      value={{
-        sidebarOpen,
-        setSideBarOpen,
-       
-      }}
-    >
-      <Sidebar/>
-      <Navbar/>
-    </GlobalContext.Provider>
-  );
-};
+  return <GlobalContext.Provider value={{sidebarOpen, setSideBarOpen}}>{children}</GlobalContext.Provider>
+}

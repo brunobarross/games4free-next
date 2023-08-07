@@ -25,14 +25,14 @@ const Page = async ({ params }) => {
   return (
     <div className="container">
       <div
-        className="flex flex-col max-w-[800px] overflow-hidden bg-white lg:mx-auto  lg:my-0 my-16  h-max rounded-lg"
+        className="flex flex-col max-w-[800px] overflow-hidden bg-white mx-auto  my-16  h-max rounded-lg"
         style={{ boxShadow: "0 2px 20px #0003" }}
       >
         <picture>
-          <img className="w-full object-cover" srcSet={jogo.thumbnail} />
+          <img className=" w-full h-full max-h-[300px]" srcSet={jogo.image} />
         </picture>
         <div className="px-6 py-8">
-        <h3 className="text-base text-ellipsis font-semibold text-neutral-950">
+        <h3 className="text-2xl text-ellipsis font-semibold text-neutral-950">
             {jogo.title}
           </h3>
           <div className="flex items-center mt-4">
@@ -89,7 +89,7 @@ const Page = async ({ params }) => {
         </div>
         <div className=" px-6 pb-8">
           <a
-            className="btn primary  uppercase w-full md:w-[12.5rem] "
+            className="btn primary !text-base  uppercase w-full md:w-[12.5rem] "
             href={jogo.open_giveaway_url}
             target="_blank"
           >

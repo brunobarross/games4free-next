@@ -28,7 +28,7 @@ const page = async ({params}) => {
 
   const quantidade = await jogosFiltrados.length; 
   return (
-    <div className="container">
+    <div className="container md:mt-16 mt-32 px-12">
       <Navbar />
       <HeaderContent quantidade={quantidade} jogos={jogosFiltrados} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 md:mt-16">
