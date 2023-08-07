@@ -5,6 +5,7 @@ import ItemSideBar from "./ItemSideBar";
 import Logo from "./Logo";
 import { X } from "phosphor-react";
 import { GlobalContext } from "../context/GlobalContext";
+import Link from "next/link";
 
 
 
@@ -40,13 +41,13 @@ const Sidebar = () => {
           <X color="#000" size={24} onClick={() => setSideBarOpen(!sidebarOpen)} />
         </button>
       </div>
-      <div className="p-8">
+      <Link className="p-8" href="/" onClick={()=> setSideBarOpen(!sidebarOpen)}>
         <Logo />
-      </div>
+      </Link >
       <div className="pr-[2rem] overflow-x-hidden overflow-y-auto">
         {links &&
           links.map((link, index) => (
-            <ItemSideBar key={index} name={link.name} link={link.href} />
+            <ItemSideBar key={index} name={link.name} link={link.href}   />
           ))}
       </div>
       <div className="mt-auto px-4 py-8">

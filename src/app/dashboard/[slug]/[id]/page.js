@@ -1,7 +1,9 @@
-''
+"";
 
 import React from "react";
 import Link from "next/link";
+import Navbar from "@/app/components/Navbar";
+import { ArrowArcLeft } from "phosphor-react";
 
 const Page = async ({ params }) => {
   const res = await fetch(
@@ -9,30 +11,34 @@ const Page = async ({ params }) => {
     {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "59df7faf5emsh2cb45c52d4b33e3p18956fjsn99432fdbfb5d",
+        "X-RapidAPI-Key": `${process.env.API_KEY}`,
         "X-RapidAPI-Host": "gamerpower.p.rapidapi.com",
       },
     }
   );
   const regex = /\d+/g;
-  const jogo = await res.json()
-
+  const jogo = await res.json();
 
   const textoAPI = jogo.instructions;
-  const arrayStr = textoAPI.replace(/\r\n/, '<br>').split('<br>');
-
+  const arrayStr = textoAPI.replace(/\r\n/, "<br>").split("<br>");
 
   return (
-    <div className="container">
+    <div className="container md:mt-16 mt-32 px-5 md:px-12 mb-12">
+      <Navbar />
+
       <div
-        className="flex flex-col max-w-[800px] overflow-hidden bg-white mx-auto  my-16  h-max rounded-lg"
+        className="flex flex-col max-w-[800px] overflow-hidden bg-white mx-auto my-16  h-max rounded-lg "
         style={{ boxShadow: "0 2px 20px #0003" }}
       >
         <picture>
-          <img className=" w-full h-full max-h-[300px]" srcSet={jogo.image} alt="Foto de capa do jogo em tamanho maior" />
+          <img
+            className=" w-full h-full max-h-[300px]"
+            srcSet={jogo.image}
+            alt="Foto de capa do jogo em tamanho maior"
+          />
         </picture>
         <div className="px-6 py-8">
-        <h3 className="text-2xl text-ellipsis font-semibold text-neutral-950">
+          <h3 className="text-2xl text-ellipsis font-semibold text-neutral-950">
             {jogo.title}
           </h3>
           <div className="flex items-center mt-4">
@@ -75,17 +81,18 @@ const Page = async ({ params }) => {
               </p>
             </div>
           </div>
-      
+
           <p className="description !text-base">{jogo.description}</p>
           <div className="mt-8 text-neutral-950">
-              <h3 className="font-semibold text-lg">Instructions</h3>
-                <ul className="mt-4">
-                    {arrayStr.map((item, index) => (
-                        <li className="mt-2" key={index}>{item}</li>
-                    ))}
-                </ul>
-            </div>
-        
+            <h3 className="font-semibold text-lg">Instructions</h3>
+            <ul className="mt-4">
+              {arrayStr.map((item, index) => (
+                <li className="mt-2" key={index}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className=" px-6 pb-8">
           <a
