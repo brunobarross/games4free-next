@@ -1,6 +1,7 @@
 # Games4Free Next.js
 
-Descrição concisa do seu projeto usando Next.js.
+O Games4Free é uma plataforma desenvolvida com Next.js que oferece uma experiência única para os entusiastas de jogos, reunindo informações sobre jogos e DLCs gratuitos disponíveis em diversas plataformas populares, como Steam, Epic Games Store, PlayStation Store e Microsoft Store. Com uma interface intuitiva e moderna, o Games4Free facilita a descoberta e acesso a ofertas imperdíveis.
+
 
 ## Índice
 
