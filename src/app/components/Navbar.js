@@ -4,6 +4,7 @@ import React, {useContext, createContext} from "react";
 import Logo from "./Logo";
 import { List } from "phosphor-react";
 import { GlobalContext } from "../context/GlobalContext";
+import Link from "next/link";
 
 
 const Navbar = () => {
@@ -13,9 +14,9 @@ const Navbar = () => {
         className="h-20 flex justify-between md:hidden px-4 items-center bg-primary-700 text-white fixed top-0 w-full z-[100]"
         style={{ backgroundColor: "#1B264F" }}
       >
-        <div className="logo w-40 pb-4">
+        <Link className="logo w-40 pb-4" href="/">
           <Logo />
-        </div>
+        </Link>
         <button
           className={`w-10 h-10 bg-white border border-gray-20 rounded-full grid place-items-center transition-opacity ${
             sidebarOpen ? "opacity-0" : "!opacity-100"

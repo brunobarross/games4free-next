@@ -41,13 +41,13 @@ const Sidebar = () => {
           <X color="#000" size={24} onClick={() => setSideBarOpen(!sidebarOpen)} />
         </button>
       </div>
-      <Link className="p-8" href="/" onClick={()=> setSideBarOpen(!sidebarOpen)}>
+      <Link className="p-8" href="/" >
         <Logo />
       </Link >
       <div className="pr-[2rem] overflow-x-hidden overflow-y-auto">
         {links &&
           links.map((link, index) => (
-            <ItemSideBar key={index} name={link.name} link={link.href}   />
+            <ItemSideBar key={index} name={link.name} link={link.href} sidebarOpen={sidebarOpen} setSideBarOpen={setSideBarOpen}/>
           ))}
       </div>
       <div className="mt-auto px-4 py-8">
