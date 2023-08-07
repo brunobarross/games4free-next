@@ -3,6 +3,10 @@ import "./globals.css";
 import { Poppins as PoppinsFont } from "@next/font/google";
 import React from "react";
 import SidebarProvider from "./context/GlobalContext";
+import Script from "next/script";
+import { useRouter } from "next/router";
+import * as gtag from "../lib/gtag";
+
 
 export const poppins = PoppinsFont({
   weight: ["300", "400", "500", "600", "700"],
@@ -17,10 +21,39 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <html lang="en" className={poppins.className}>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <head>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
         <SidebarProvider>
