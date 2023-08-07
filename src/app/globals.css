@@ -1,15 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --primary-rgb: 39,70,144;
-  --background-main: #1F1F1F;
+  --primary-rgb: 39, 70, 144;
+  --background-main: #1f1f1f;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,7 +16,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --background-main: #1F1F1F;
+    --background-main: #1f1f1f;
   }
 }
 
@@ -30,7 +29,6 @@ body {
     )
     rgb(var(--background-start-rgb)); */
   background-color: var(--background-main);
-
 }
 
 html {
@@ -42,18 +40,17 @@ html {
 
 @media (max-width: 1440px) {
   html {
-      font-size: calc(var(--font-base) - 10%);
+    font-size: calc(var(--font-base) - 10%);
   }
 }
 
 @media (max-width: 980px) {
   html {
-      font-size: calc(var(--font-base) - 12.5%);
+    font-size: calc(var(--font-base) - 12.5%);
   }
 }
 
-
-.container{
+.container {
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -61,56 +58,63 @@ html {
   max-width: 1448px;
   flex-direction: column;
   align-items: center;
-
 }
 
-.badge{
+.badge {
   display: inline-flex;
   width: max-content;
   align-items: center;
   justify-content: center;
-  border-radius: .25rem;
-  padding: .5rem .75rem;
-  font-size: .75rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  color: white ;
-  background-color: #002C3F;
-
+  color: white;
+  background-color: #002c3f;
 }
-.description{
+
+.badge.xbox-series-x-s,
+.badge.xbox-360 {
+  background: #0e740f;
+}
+.badge.pc{
+  background: #002c3f;
+}
+
+
+.description {
   margin-top: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    --tw-text-opacity: 1;
-    color: rgb(23 23 23 / var(--tw-text-opacity));
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
 }
 
-.btn{
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: .25rem;
-  padding: .875rem .75rem;
-  font-size: .75rem;
+  border-radius: 0.25rem;
+  padding: 0.875rem 0.75rem;
+  font-size: 0.75rem;
   font-weight: 500;
   text-align: center;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   border: 1px solid transparent;
 }
 
-.btn.primary{
+.btn.primary {
   color: #fff;
   background-color: rgba(var(--primary-rgb), 1);
 }
 
-.btn.primary:hover{
+.btn.primary:hover {
   border-color: rgba(var(--primary-rgb), 1);
   color: rgba(var(--primary-rgb), 1);
-  background-color: #fff ;
-
+  background-color: #fff;
 }

@@ -29,7 +29,7 @@ const Page = async ({ params }) => {
         style={{ boxShadow: "0 2px 20px #0003" }}
       >
         <picture>
-          <img className=" w-full h-full max-h-[300px]" srcSet={jogo.image} />
+          <img className=" w-full h-full max-h-[300px]" srcSet={jogo.image} alt="Foto de capa do jogo em tamanho maior" />
         </picture>
         <div className="px-6 py-8">
         <h3 className="text-2xl text-ellipsis font-semibold text-neutral-950">
