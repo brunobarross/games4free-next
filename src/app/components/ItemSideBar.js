@@ -14,14 +14,11 @@ export function ItemSideBar(props) {
     }
   }, [pathname]);
   
-
-
-
   return (
     <Link href={props.link}
         className={`${
           isActive ? "bg-white text-black" : "text-white"
-        } inline-flex w-full cursor-pointer items-center rounded-tr-lg rounded-br-lg py-5 px-4 text-base transition-all`}
+        } inline-flex w-full cursor-pointer items-center rounded-tr-lg rounded-br-lg py-5 px-4 text-lg font-medium transition-all`}
 
         >
         {props.name}

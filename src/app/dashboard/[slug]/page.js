@@ -34,7 +34,7 @@ const page = async ({ params }) => {
         plataformas.some((plataforma) => jogo.platforms.includes(plataforma))
       );
     } else if (
-      params.slug === "dlcs" &&
+      params.slug === "expansoes" &&
       plataformas.some((plataforma) => jogo.platforms.includes(plataforma))
     ) {
       return jogo.type === "DLC";

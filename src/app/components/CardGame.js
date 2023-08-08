@@ -9,7 +9,7 @@ const CardGame = (props) => {
       style={{ boxShadow: "0 2px 20px #0003" }}
     >
       <picture>
-        <img className="w-full object-cover  max-h-[150px] md:max-h-max" srcSet={props.jogo.thumbnail}  alt="Foto de capa do jogo em tamanho menor"/>
+        <img className="w-full object-cover max-h-[150px] md:max-h-[200px]" srcSet={props.jogo.thumbnail}  alt="Foto de capa do jogo em tamanho menor"/>
       </picture>
       <div className="px-4 py-6">
         <div className="flex items-center">
