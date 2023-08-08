@@ -11,7 +11,7 @@ const Navbar = () => {
   const {sidebarOpen, setSideBarOpen} = useContext(GlobalContext)
   return (
       <div
-        className="h-20 flex justify-between md:hidden px-4 items-center bg-primary-700 text-white fixed top-0 w-full z-[100]"
+        className="h-20 fixed md:static flex justify-between  px-4 items-center bg-primary-700 text-white top-0 w-full z-[100] "
         style={{ backgroundColor: "#1B264F" }}
       >
         <Link className="logo w-40 pb-4" href="/">
