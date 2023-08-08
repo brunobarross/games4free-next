@@ -11,14 +11,14 @@ const Navbar = () => {
   const {sidebarOpen, setSideBarOpen} = useContext(GlobalContext)
   return (
       <div
-        className="h-20 flex justify-between md:hidden px-4 items-center bg-primary-700 text-white fixed top-0 w-full z-[100]"
+        className="h-20 fixed md:static flex justify-between  px-4 items-center bg-primary-700 text-white top-0 w-full z-[100] "
         style={{ backgroundColor: "#1B264F" }}
       >
         <Link className="logo w-40 pb-4" href="/">
           <Logo />
         </Link>
         <button
-          className={`w-10 h-10 bg-white border border-gray-20 rounded-full grid place-items-center transition-opacity ${
+          className={`md:hidden w-10 h-10 bg-white border border-gray-20 rounded-full grid place-items-center transition-opacity ${
             sidebarOpen ? "opacity-0" : "!opacity-100"
           }`}
           onClick={()=> setSideBarOpen(!sidebarOpen)} // Use a função toggleSidebar para alterar o estado da barra lateral

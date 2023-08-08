@@ -21,8 +21,8 @@ const Sidebar = () => {
       type: "Game",
     },
     {
-      name: "DLC",
-      href: "/dashboard/dlcs",
+      name: "Expansões",
+      href: "/dashboard/expansoes",
       type: "DLC",
     },
   ];
@@ -41,10 +41,10 @@ const Sidebar = () => {
           <X color="#000" size={24} onClick={() => setSideBarOpen(!sidebarOpen)} />
         </button>
       </div>
-      <Link className="p-8" href="/" >
+      <Link className="p-8 block md:hidden " href="/" >
         <Logo />
       </Link >
-      <div className="pr-[2rem] overflow-x-hidden overflow-y-auto">
+      <div className="pr-[2rem] md:pt-8 overflow-x-hidden overflow-y-auto">
         {links &&
           links.map((link, index) => (
             <ItemSideBar key={index} name={link.name} link={link.href} sidebarOpen={sidebarOpen} setSideBarOpen={setSideBarOpen}/>
