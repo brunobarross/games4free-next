@@ -82,7 +82,7 @@ const Page = async ({ params }) => {
               </div>
             </div>
 
-            <p className="description !text-base">{jogo.description}</p>
+            <p className="description-single !text-base">{jogo.description}</p>
             <div className="mt-8 text-neutral-950">
               <h3 className="font-semibold text-lg">Instructions</h3>
               <ul className="mt-4">

@@ -13,7 +13,7 @@ export const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Games4Free | Jogos e DLCS grátis',
+  title: 'Games4Free | Jogos Steam, Epic Games, Playstation e Xbox Grátis',
   description:
     'Os melhores jogos gratuitos da Steam, Epic, PS4 e Xbox estão aqui. Resgate as chaves por tempo limitado.',
   keywords: 'games, jogos, gratis, free, dlcs, dlc, epic, steam, ubisoft',
