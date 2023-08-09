@@ -95,6 +95,14 @@ html {
   display: -webkit-box;
 }
 
+.description-single {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(23 23 23 / var(--tw-text-opacity));
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
