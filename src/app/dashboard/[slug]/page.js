@@ -8,7 +8,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 const page = async ({ params }) => {
   const res = await fetch(`${process.env.API_URL}`, {
     method: "GET",
-    cache: 'no-cache',
+    next: { revalidate: 3600 },
     headers: {
       "X-RapidAPI-Key": `${process.env.API_KEY}`,
       "X-RapidAPI-Host": "gamerpower.p.rapidapi.com",
