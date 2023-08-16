@@ -30,15 +30,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <title>{metadata.title}</title>
       </head>
-      <Script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}`}
-          strategy="lazyOnload"
-          crossOrigin="anonymous"
-        />
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
-      />
+      <Script src='//pl20344643.highcpmrevenuegate.com/fb/da/97/fbda97efc0d4604f5a6468e9f15c63fb.js'></Script>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM}`} />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
