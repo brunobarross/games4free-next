@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
+      <Script src='//pl20344643.highcpmrevenuegate.com/fb/da/97/fbda97efc0d4604f5a6468e9f15c63fb.js'></Script>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM}`} />
       <Script id="google-analytics">
         {`
