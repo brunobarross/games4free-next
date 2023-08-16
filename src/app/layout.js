@@ -30,9 +30,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
         <title>{metadata.title}</title>
       </head>
+      <Script src="//pl20344643.highcpmrevenuegate.com/fb/da/97/fbda97efc0d4604f5a6468e9f15c63fb.js"></Script>
       <Script src="//pl20344809.highcpmrevenuegate.com/17/06/3a/17063ae5bbebe7bf8e887428f431181d.js"></Script>
 
-      <Script
+      {/* <Script
         src={`atOptions = {
             'key' : 'bfecd93799d03ae0e3da3309d315194b',
             'format' : 'iframe',
@@ -41,7 +42,7 @@ export default function RootLayout({ children }) {
             'params' : {}
           };
 	      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitablecreativeformat.com/bfecd93799d03ae0e3da3309d315194b/invoke.js"></scr' + 'ipt>');`}
-      />
+      /> */}
 
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTM}`}
