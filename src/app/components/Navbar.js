@@ -18,7 +18,7 @@ const Navbar = () => {
           <Logo />
         </Link>
         <button
-          className={`w-10 h-10 bg-white border border-gray-20 rounded-full grid place-items-center transition-opacity ${
+          className={`md:hidden w-10 h-10 bg-white border border-gray-20 rounded-full grid place-items-center transition-opacity ${
             sidebarOpen ? "opacity-0" : "!opacity-100"
           }`}
           onClick={()=> setSideBarOpen(!sidebarOpen)} // Use a função toggleSidebar para alterar o estado da barra lateral
